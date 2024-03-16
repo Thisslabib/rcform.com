@@ -1,0 +1,109 @@
+:root{
+  --primary:#00ff66f1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 63%;
+}
+body {
+  background: black;
+  height: 100vh;
+}
+.contact {
+  background: black;
+  height: 100vh;
+  padding: 10rem 9% 2rem;
+  text-align: center;
+}
+.contact .title {
+  margin-top: -5rem;
+  margin-bottom: 3rem;
+  font-size: 4em;
+  color: var(--primary);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.title span {
+  color: #fff;
+}
+section form {
+  max-width: 70rem;
+  text-align: center;
+  margin: 1rem auto;
+  margin-bottom: 9rem;
+}
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+form input,
+textarea {
+  width: 100%;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.2rem solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(10px);
+  filter: drop-shadow(0 0 100px var(--primary));
+  outline: none;
+  color: #fff;
+  border-radius: 0.8rem;
+  gap: 2.5rem;
+  margin: 0.7rem 0;
+  transition: 0.5s ease;
+}
+input::placeholder {
+  font-size: 1.5rem;
+  letter-spacing: .03rem;
+}
+form input {
+  width: 49%;
+}
+input-box input:focus,
+.input-box input:valid {
+  border: 0.2rem solid var(--primary);
+}
+.taxtarea {
+  resize: none;
+}
+textarea:focus,
+.textarea:valid {
+  border: .2rem solid var(--primary);
+}
+.btn {
+  margin-top: 2rem;
+  cursor: pointer;
+  filter: none;
+}
+.btn:hover {
+  background: var(--primary);
+  box-shadow: 0 0 0.3rem var(--primary), 0 0 0.7 var(--primary);
+}
+/*RESPONSIVE*/
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 990px) {
+  section {
+    padding: 10rem 3% 2rem;
+  }
+  .contact {
+    min-height: auto;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .input-box input {
+    width: 100%;
+  }
+}
